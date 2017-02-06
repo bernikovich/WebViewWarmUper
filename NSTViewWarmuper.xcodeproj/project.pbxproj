@@ -13,6 +13,11 @@
 		B0E499F11E48725700837DC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E499EF1E48725700837DC1 /* Main.storyboard */; };
 		B0E499F31E48725700837DC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E499F21E48725700837DC1 /* Assets.xcassets */; };
 		B0E499F61E48725700837DC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E499F41E48725700837DC1 /* LaunchScreen.storyboard */; };
+		B0E49A001E48744400837DC1 /* NSTViewWarmuper.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E499FF1E48744400837DC1 /* NSTViewWarmuper.m */; };
+		B0E49A031E4881B700837DC1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E49A021E4881B700837DC1 /* WebViewController.m */; };
+		B0E49A051E48A6B500837DC1 /* apple.html in Resources */ = {isa = PBXBuildFile; fileRef = B0E49A041E48A6B500837DC1 /* apple.html */; };
+		B0E49A091E48A9B900837DC1 /* some1.html in Resources */ = {isa = PBXBuildFile; fileRef = B0E49A071E48A9B900837DC1 /* some1.html */; };
+		B0E49A0A1E48A9B900837DC1 /* some2.html in Resources */ = {isa = PBXBuildFile; fileRef = B0E49A081E48A9B900837DC1 /* some2.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,13 @@
 		B0E499F21E48725700837DC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0E499F51E48725700837DC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0E499F71E48725700837DC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0E499FE1E48744400837DC1 /* NSTViewWarmuper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSTViewWarmuper.h; path = Classes/NSTViewWarmuper.h; sourceTree = "<group>"; };
+		B0E499FF1E48744400837DC1 /* NSTViewWarmuper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSTViewWarmuper.m; path = Classes/NSTViewWarmuper.m; sourceTree = "<group>"; };
+		B0E49A011E4881B700837DC1 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		B0E49A021E4881B700837DC1 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		B0E49A041E48A6B500837DC1 /* apple.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = apple.html; sourceTree = "<group>"; };
+		B0E49A071E48A9B900837DC1 /* some1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = some1.html; sourceTree = "<group>"; };
+		B0E49A081E48A9B900837DC1 /* some2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = some2.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,14 @@
 		B0E499E51E48725700837DC1 /* NSTViewWarmuper */ = {
 			isa = PBXGroup;
 			children = (
+				B0E49A061E48A6B900837DC1 /* Samples */,
+				B0E499FD1E48739200837DC1 /* Classes */,
 				B0E499E91E48725700837DC1 /* AppDelegate.h */,
 				B0E499EA1E48725700837DC1 /* AppDelegate.m */,
 				B0E499EC1E48725700837DC1 /* ViewController.h */,
 				B0E499ED1E48725700837DC1 /* ViewController.m */,
+				B0E49A011E4881B700837DC1 /* WebViewController.h */,
+				B0E49A021E4881B700837DC1 /* WebViewController.m */,
 				B0E499EF1E48725700837DC1 /* Main.storyboard */,
 				B0E499F21E48725700837DC1 /* Assets.xcassets */,
 				B0E499F41E48725700837DC1 /* LaunchScreen.storyboard */,
@@ -77,6 +93,25 @@
 				B0E499E71E48725700837DC1 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0E499FD1E48739200837DC1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B0E499FE1E48744400837DC1 /* NSTViewWarmuper.h */,
+				B0E499FF1E48744400837DC1 /* NSTViewWarmuper.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		B0E49A061E48A6B900837DC1 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				B0E49A071E48A9B900837DC1 /* some1.html */,
+				B0E49A081E48A9B900837DC1 /* some2.html */,
+				B0E49A041E48A6B500837DC1 /* apple.html */,
+			);
+			name = Samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +145,7 @@
 				TargetAttributes = {
 					B0E499E21E48725700837DC1 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PRD3QRZKRA;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,9 +173,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E49A091E48A9B900837DC1 /* some1.html in Resources */,
+				B0E49A0A1E48A9B900837DC1 /* some2.html in Resources */,
 				B0E499F61E48725700837DC1 /* LaunchScreen.storyboard in Resources */,
 				B0E499F31E48725700837DC1 /* Assets.xcassets in Resources */,
 				B0E499F11E48725700837DC1 /* Main.storyboard in Resources */,
+				B0E49A051E48A6B500837DC1 /* apple.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +190,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E499EE1E48725700837DC1 /* ViewController.m in Sources */,
+				B0E49A031E4881B700837DC1 /* WebViewController.m in Sources */,
 				B0E499EB1E48725700837DC1 /* AppDelegate.m in Sources */,
 				B0E499E81E48725700837DC1 /* main.m in Sources */,
+				B0E49A001E48744400837DC1 /* NSTViewWarmuper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +311,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PRD3QRZKRA;
 				INFOPLIST_FILE = NSTViewWarmuper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bernikovich.NSTViewWarmuper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,7 +324,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PRD3QRZKRA;
 				INFOPLIST_FILE = NSTViewWarmuper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bernikovich.NSTViewWarmuper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
