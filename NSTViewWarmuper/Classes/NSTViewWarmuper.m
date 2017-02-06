@@ -90,7 +90,7 @@
     static id sharedInstance;
     dispatch_once(&p, ^{
         sharedInstance = [[self alloc] initWithViewCreationBlock:^id<NSTWarmupable> _Nullable{
-            return [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, 1, 1) configuration:[WKWebViewConfiguration new]];
+            return [[WKWebView alloc] initWithFrame:CGRectZero configuration:[WKWebViewConfiguration new]];
         } initialViewsCount:5];
     });
     return sharedInstance;
@@ -124,7 +124,7 @@
     static id sharedInstance;
     dispatch_once(&p, ^{
         sharedInstance = [[self alloc] initWithViewCreationBlock:^id<NSTWarmupable> _Nullable{
-            return [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
+            return [UIWebView new];
         } initialViewsCount:5];
     });
     return sharedInstance;
