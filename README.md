@@ -36,6 +36,18 @@ import WebViewWarmUper
 let webView = WKWebViewWarmUper.shared.dequeue()
 ```
 
+### Advanced (custom WKWebViewConfiguration)
+
+```swift
+let customWarmUper = WKWebViewWarmUper { () -> WKWebView in
+  let configuration = WKWebViewConfiguration()
+  // Setup configuration.
+  return WKWebView(frame: .zero, configuration: configuration)
+}
+// Some time after.
+let webView = customWarmUper.dequeue()
+```
+
 ## License
 
 `WebViewWarmUper` is released under the MIT license. See `LICENSE` for details.
