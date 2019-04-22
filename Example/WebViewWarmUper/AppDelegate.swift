@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import WebViewWarmUper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

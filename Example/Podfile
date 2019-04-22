@@ -1,0 +1,10 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'Example' do
+  pod 'WebViewWarmUper', :path => '../'
+
+  target 'Tests' do
+    inherit! :search_paths
+  end
+end

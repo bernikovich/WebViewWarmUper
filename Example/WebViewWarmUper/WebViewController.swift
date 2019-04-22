@@ -5,6 +5,7 @@
 
 import UIKit
 import WebKit
+import WebViewWarmUper
 
 enum WebViewType {
     case webKit, legacy

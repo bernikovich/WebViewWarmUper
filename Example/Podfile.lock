@@ -1,0 +1,16 @@
+PODS:
+  - WebViewWarmUper (2.0.0)
+
+DEPENDENCIES:
+  - WebViewWarmUper (from `../`)
+
+EXTERNAL SOURCES:
+  WebViewWarmUper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WebViewWarmUper: c23366eac77ed50387338efad1c21795b03c335e
+
+PODFILE CHECKSUM: 1244e8753c82d4b3c962a461a9d216d0de15764f
+
+COCOAPODS: 1.6.1
