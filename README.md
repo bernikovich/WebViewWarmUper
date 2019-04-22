@@ -10,7 +10,7 @@ Download sample project to test it. You can create issue or pull requests if you
 CocoaPods is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate `WebViewWarmUper` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'WebViewWarmuper'
+pod 'WebViewWarmUper'
 ```
 
 ### Manually
