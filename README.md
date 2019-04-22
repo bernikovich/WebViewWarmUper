@@ -23,15 +23,19 @@ You can simply copy source files from `Classes` folder (`WebViewWarmuper.swift`)
 First you should call prepare method, it should be called some time before you want to show your web view. In test app we call this method in `func application(_ application: didFinishLaunchingWithOptions: )`.
 
 ```swift
+import WebViewWarmUper
+
 WKWebViewWarmUper.shared.prepare()
 ```
 
 Then, when you need new web view instance:
 
 ```swift
+import WebViewWarmUper
+
 let webView = WKWebViewWarmUper.shared.dequeue()
 ```
 
 ## License
 
-WebViewWarmUper is released under the MIT license. See `LICENSE` for details.
+`WebViewWarmUper` is released under the MIT license. See `LICENSE` for details.
