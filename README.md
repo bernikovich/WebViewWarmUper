@@ -26,3 +26,7 @@ First you should call prepare method, it should be called some time before you w
 ```swift
 WKWebViewWarmUper.shared.prepare()
 ```
+
+## License
+
+WebViewWarmUper is released under the MIT license. See `LICENSE` for details.
