@@ -48,6 +48,10 @@ let customWarmUper = WKWebViewWarmUper { () -> WKWebView in
 let webView = customWarmUper.dequeue()
 ```
 
+## Legacy
+
+The latest version written in Objective-C is `1.x`.
+
 ## License
 
 `WebViewWarmUper` is released under the MIT license. See `LICENSE` for details.
