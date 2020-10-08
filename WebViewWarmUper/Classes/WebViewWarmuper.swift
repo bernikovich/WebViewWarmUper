@@ -65,16 +65,3 @@ public extension WarmUper where Object == WKWebView {
         WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
     })
 }
-
-extension UIWebView: WarmUpable {
-    public func warmUp() {
-        loadHTMLString("", baseURL: nil)
-    }
-}
-
-public typealias UIWebViewWarmUper = WarmUper<UIWebView>
-public extension WarmUper where Object == UIWebView {
-    static let shared = UIWebViewWarmUper(creationClosure: {
-        UIWebView()
-    })
-}

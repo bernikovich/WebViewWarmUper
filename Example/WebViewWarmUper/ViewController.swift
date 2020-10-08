@@ -22,9 +22,7 @@ class ViewController: UIViewController {
     let tableView = UITableView(frame: .zero, style: .plain)
     let configurationCollection: [WebViewControllerConfiguration] = {
         var collecton: [WebViewControllerConfiguration] = []
-        
-        collecton.append(WebViewControllerConfiguration(title: "UIWebView", type: .legacy, warmUp: false))
-        collecton.append(WebViewControllerConfiguration(title: "UIWebView + WarmUper", type: .legacy, warmUp: true))
+
         collecton.append(WebViewControllerConfiguration(title: "WKWebView", type: .webKit, warmUp: false))
         collecton.append(WebViewControllerConfiguration(title: "WKWebView + WarmUper", type: .webKit, warmUp: true))
         

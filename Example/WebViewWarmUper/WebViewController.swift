@@ -8,7 +8,7 @@ import WebKit
 import WebViewWarmUper
 
 enum WebViewType {
-    case webKit, legacy
+    case webKit
 }
 
 class WebViewController: UIViewController {
@@ -39,16 +39,6 @@ class WebViewController: UIViewController {
         
         let webView: UIView & WebView
         switch type {
-        case .legacy:
-            let uiWebView: UIWebView
-            if warmUp {
-                uiWebView = UIWebViewWarmUper.shared.dequeue()
-            } else {
-                uiWebView = UIWebView()
-            }
-            uiWebView.delegate = self
-            uiWebView.scrollView.isScrollEnabled = false
-            webView = uiWebView
         case .webKit:
             let wkWebView: WKWebView
             if warmUp {
@@ -81,21 +71,14 @@ class WebViewController: UIViewController {
 protocol WebView {
     func loadHTMLString(_ string: String)
 }
+
 extension WKWebView: WebView {
     func loadHTMLString(_ string: String) {
         loadHTMLString(string, baseURL: nil)
     }
 }
-extension UIWebView: WebView {
-    func loadHTMLString(_ string: String) {
-        loadHTMLString(string, baseURL: nil)
-    }
-}
 
-extension WebViewController: UIWebViewDelegate, WKNavigationDelegate {
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        updateResult()
-    }
+extension WebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         updateResult()
     }
