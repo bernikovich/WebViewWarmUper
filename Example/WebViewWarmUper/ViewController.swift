@@ -7,11 +7,10 @@ import UIKit
 
 struct WebViewControllerConfiguration {
     let title: String
-    let type: WebViewType
     let warmUp: Bool
-    
+
     func createWebViewController() -> UIViewController {
-        let controller = WebViewController(type: type, warmUp: warmUp)
+        let controller = WebViewController(warmUp: warmUp)
         controller.title = title
         return controller
     }
@@ -23,11 +22,9 @@ class ViewController: UIViewController {
     let configurationCollection: [WebViewControllerConfiguration] = {
         var collecton: [WebViewControllerConfiguration] = []
         
-        collecton.append(WebViewControllerConfiguration(title: "UIWebView", type: .legacy, warmUp: false))
-        collecton.append(WebViewControllerConfiguration(title: "UIWebView + WarmUper", type: .legacy, warmUp: true))
-        collecton.append(WebViewControllerConfiguration(title: "WKWebView", type: .webKit, warmUp: false))
-        collecton.append(WebViewControllerConfiguration(title: "WKWebView + WarmUper", type: .webKit, warmUp: true))
-        
+        collecton.append(WebViewControllerConfiguration(title: "WKWebView", warmUp: false))
+        collecton.append(WebViewControllerConfiguration(title: "WKWebView + WarmUper", warmUp: true))
+
         return collecton
     }()
     
@@ -41,7 +38,6 @@ class ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         view.addSubview(tableView)
     }
-    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -60,5 +56,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(configurationCollection[indexPath.row].createWebViewController(), animated: true)
     }
-    
 }
