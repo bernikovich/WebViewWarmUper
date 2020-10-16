@@ -14,7 +14,6 @@
 		B0073648226E36840056E9A7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0073647226E36840056E9A7 /* WebViewController.swift */; };
 		B0073652226E3A420056E9A7 /* sample2.html in Resources */ = {isa = PBXBuildFile; fileRef = B007364A226E3A420056E9A7 /* sample2.html */; };
 		B0073653226E3A420056E9A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B007364B226E3A420056E9A7 /* Assets.xcassets */; };
-		B0073654226E3A420056E9A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B007364C226E3A420056E9A7 /* LaunchScreen.storyboard */; };
 		B0073656226E3A420056E9A7 /* sample1.html in Resources */ = {isa = PBXBuildFile; fileRef = B0073650226E3A420056E9A7 /* sample1.html */; };
 		B0073657226E3A420056E9A7 /* apple.html in Resources */ = {isa = PBXBuildFile; fileRef = B0073651226E3A420056E9A7 /* apple.html */; };
 		D0DC2EE182BB3D7AA22AA40B /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D946ED9DF5F45D273D938A78 /* Pods_Example.framework */; };
@@ -45,7 +44,6 @@
 		B0073647226E36840056E9A7 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B007364A226E3A420056E9A7 /* sample2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample2.html; sourceTree = "<group>"; };
 		B007364B226E3A420056E9A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B007364D226E3A420056E9A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0073650226E3A420056E9A7 /* sample1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample1.html; sourceTree = "<group>"; };
 		B0073651226E3A420056E9A7 /* apple.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = apple.html; sourceTree = "<group>"; };
 		B03A00103A6A1A2B6B9B8121 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			children = (
 				B007364A226E3A420056E9A7 /* sample2.html */,
 				B007364B226E3A420056E9A7 /* Assets.xcassets */,
-				B007364C226E3A420056E9A7 /* LaunchScreen.storyboard */,
 				B0073650226E3A420056E9A7 /* sample1.html */,
 				B0073651226E3A420056E9A7 /* apple.html */,
 			);
@@ -224,7 +221,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -241,11 +238,11 @@
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "WebViewWarmUper" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
@@ -265,7 +262,6 @@
 			files = (
 				B0073656226E3A420056E9A7 /* sample1.html in Resources */,
 				B0073653226E3A420056E9A7 /* Assets.xcassets in Resources */,
-				B0073654226E3A420056E9A7 /* LaunchScreen.storyboard in Resources */,
 				B0073652226E3A420056E9A7 /* sample2.html in Resources */,
 				B0073657226E3A420056E9A7 /* apple.html in Resources */,
 			);
@@ -330,15 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/WebViewWarmUper/WebViewWarmUper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewWarmUper.framework",
 			);
@@ -378,17 +370,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		B007364C226E3A420056E9A7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B007364D226E3A420056E9A7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -402,14 +383,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -456,14 +440,17 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

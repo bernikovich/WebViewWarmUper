@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // You should run prepare before using web views.
         WKWebViewWarmUper.shared.prepare()
-        UIWebViewWarmUper.shared.prepare()
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = UINavigationController(rootViewController: ViewController())

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = "WebViewWarmUper"
-  spec.version       = "2.0.1"
+  spec.version       = "3.0.0"
   spec.summary       = "Boost WKWebView loading speed"
   spec.homepage      = "https://github.com/bernikovich/WebViewWarmUper"
   spec.license       = { :type => "MIT" }

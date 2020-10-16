@@ -7,10 +7,6 @@ import UIKit
 import WebKit
 import WebViewWarmUper
 
-enum WebViewType {
-    case webKit, legacy
-}
-
 class WebViewController: UIViewController {
     
     private enum Resource: String {
@@ -18,13 +14,11 @@ class WebViewController: UIViewController {
         case articleWithWidgetAndCss = "sample1"
         case articleWithCss = "sample2"
     }
-    
-    let type: WebViewType
+
     let warmUp: Bool
     private var loadHTMLStart: TimeInterval = 0
     
-    init(type: WebViewType, warmUp: Bool) {
-        self.type = type
+    init(warmUp: Bool) {
         self.warmUp = warmUp
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,44 +30,29 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+
+		let wkWebView: WKWebView
+		if warmUp {
+			wkWebView = WKWebViewWarmUper.shared.dequeue()
+		} else {
+			wkWebView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
+		}
+		wkWebView.navigationDelegate = self
+		wkWebView.scrollView.isScrollEnabled = false
+		wkWebView.loadHTMLString("", baseURL: nil)
         
-        let webView: UIView & WebView
-        switch type {
-        case .legacy:
-            let uiWebView: UIWebView
-            if warmUp {
-                uiWebView = UIWebViewWarmUper.shared.dequeue()
-            } else {
-                uiWebView = UIWebView()
-            }
-            uiWebView.delegate = self
-            uiWebView.scrollView.isScrollEnabled = false
-            webView = uiWebView
-        case .webKit:
-            let wkWebView: WKWebView
-            if warmUp {
-                wkWebView = WKWebViewWarmUper.shared.dequeue()
-            } else {
-                wkWebView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
-            }
-            wkWebView.navigationDelegate = self
-            wkWebView.scrollView.isScrollEnabled = false
-            wkWebView.loadHTMLString("", baseURL: nil)
-            webView = wkWebView
-        }
-        
-        webView.frame = view.bounds
-        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(webView)
+		wkWebView.frame = view.bounds
+		wkWebView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.addSubview(wkWebView)
         
         let resource: Resource = .articleWithCss
         guard let path = Bundle.main.path(forResource: resource.rawValue, ofType: "html"),
             let contents = try? String(contentsOfFile: path) else {
             return
         }
-        
+
         loadHTMLStart = CACurrentMediaTime()
-        webView.loadHTMLString(contents)
+		wkWebView.loadHTMLString(contents)
     }
     
 }
@@ -92,14 +71,12 @@ extension UIWebView: WebView {
     }
 }
 
-extension WebViewController: UIWebViewDelegate, WKNavigationDelegate {
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        updateResult()
-    }
+extension WebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         updateResult()
     }
-    private func updateResult() {
+
+	private func updateResult() {
         let delta = CACurrentMediaTime() - loadHTMLStart
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: String(format: "%.2f", delta), style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem?.isEnabled = false
